@@ -191,14 +191,10 @@ def run_karma_web_test(ctx):
     """
     files = depset(ctx.files.srcs)
     for d in ctx.attr.deps + ctx.attr.runtime_deps:
-        has_node_sources = hasattr(d, "node_sources")
-        has_dev_scripts = hasattr(d, "dev_scripts")
-        if has_node_sources:
+        if hasattr(d, "node_sources"):
             files = depset(transitive = [files, d.node_sources])
-        if has_dev_scripts:
+        if hasattr(d, "dev_scripts"):
             files = depset(transitive = [files, d.dev_scripts])
-        if not has_node_sources and not has_dev_scripts and hasattr(d, "files"):
-            files = depset(transitive = [files, d.files])
 
     amd_names_shim = _write_amd_names_shim(ctx)
 
