@@ -189,7 +189,9 @@ try {
   function configureFiles(conf) {
     overrideConfigValue(conf, 'files', [
       TMPL_bootstrap_files
+      // BEGIN USER FILES
       TMPL_user_files
+      // END USER FILES
     ].map(f => {
       if (f.startsWith('NODE_MODULES/')) {
         try {

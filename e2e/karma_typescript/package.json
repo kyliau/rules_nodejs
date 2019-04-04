@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "@bazel/karma": "bazel://@npm_bazel_karma//:npm_package",
-    "@bazel/typescript": "bazel://@npm_bazel_typescript//:npm_package",
+    "@bazel/karma": "file:///Users/kyliau/Documents/GitHub/rules_nodejs/dist/npm_bazel_karma$24462",
+    "@bazel/typescript": "file:///Users/kyliau/Documents/GitHub/rules_nodejs/dist/npm_bazel_typescript$30841",
     "@types/jasmine": "2.8.2",
+    "jasmine": "^3.4.0",
     "typescript": "2.9.2"
   },
   "scripts": {

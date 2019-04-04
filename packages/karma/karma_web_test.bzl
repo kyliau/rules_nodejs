@@ -165,13 +165,13 @@ def _write_karma_config(ctx, files, amd_names_shim):
         output = configuration,
         template = ctx.file._conf_tmpl,
         substitutions = {
-            "TMPL_bootstrap_files": "\n".join(["      '%s'," % e for e in bootstrap_entries]),
+            "TMPL_bootstrap_files": "\n      ".join(["'%s'," % e for e in bootstrap_entries]),
             "TMPL_config_file": expand_path_into_runfiles(ctx, config_file.short_path) if config_file else "",
             "TMPL_env_vars": env_vars,
             "TMPL_runfiles_path": "/".join([".."] * config_segments),
             "TMPL_runtime_files": "\n".join(["      '%s'," % e for e in runtime_files]),
             "TMPL_static_files": "\n".join(["      '%s'," % e for e in static_files]),
-            "TMPL_user_files": "\n".join(["      '%s'," % e for e in user_entries]),
+            "TMPL_user_files": "\n      ".join(["'%s'," % e for e in user_entries]),
         },
     )
 

@@ -34,7 +34,7 @@
     "tmp": "0.0.33"
   },
   "devDependencies": {
-    "@bazel/typescript": "bazel://@npm_bazel_typescript//:npm_package",
+    "@bazel/typescript": "file:///Users/kyliau/Documents/GitHub/rules_nodejs/dist/npm_bazel_typescript$30841",
     "@types/node": "7.0.18",
     "jasmine-core": "2.8.0",
     "protobufjs": "5.0.3",
